@@ -9,12 +9,14 @@ export default function TextForm(props) {
     console.log("Uppercase was Clicked")
     let n = text.toUpperCase();
     setText (n)
+    props.showAlert("Converted to Uppercase", "warning")
   }
 
   const handleLowClick = () => {
     console.log("Lowercase was Clicked")
     let m = text.toLowerCase();
     setText(m)
+    props.showAlert("Converted to Lowercase", "warning")
   }
 
   const handleOnChange = (event) => {
@@ -25,18 +27,20 @@ export default function TextForm(props) {
     console.log("Extra Space removed")
     let cleanedText = text.replace(/\s+/g, ' ').trim();
     setText(cleanedText);
+    props.showAlert("Removed Extra Spaces", "warning")
   }
 
   const handleClear = () => {
     console.log("Text Cleared")
     setText('')
+    props.showAlert("Text Cleared", "warning")
   }
 
   const handleLoremIpsum = () => {
     console.log("text generated")
     let generatedtxt = handleGenerate();
     setText(text + " " + generatedtxt);
-
+    props.showAlert("Text Generated", "warning")
   }
 
   const handleGenerate = () => {
