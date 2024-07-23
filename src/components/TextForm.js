@@ -56,6 +56,7 @@ export default function TextForm(props) {
   <button className="btn btn-outline-info mx-1 " onClick={handleExtraSpaces} >Remove Extra Space</button>
   <button className="btn btn-outline-info mx-1 " onClick={handleClear} >Clear Text</button>
   <button className="btn btn-outline-info mx-1 " onClick={handleLoremIpsum} >LoremIpsum</button>
+  <button className='btn btn'></button>
 </div>
 <div className="container my-3" style={{color: props.mode === 'dark'?'white':'black'}}>
 <h2>Your text summary</h2>
